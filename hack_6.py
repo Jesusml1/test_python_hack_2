@@ -9,7 +9,15 @@ text: [] output => ["0"]
 """
 
 
-def fn_hack_6():
-    result = ["a","b","c","d","e"]
-    #...
+def fn_hack_6(input):
+    result = []
+    if input == []:
+        return ['0']
+
+    for i in range(len(input)):
+        if i % 2 == 0:
+            result.append(str(i + 1))
+        else:
+            result.append('-')
+    
     return result
